@@ -1,0 +1,29 @@
+#!/bin/bash
+echo "Auto-compiler for the C language"
+echo "Author: Mattia Vitturi"
+echo
+echo "Attached source: $1.c"
+
+if [ "$2" == "-r" ]; then
+	make -B "$1"
+fi
+
+while (true) do
+
+	make -q "$1"
+	exitcode=$?
+	if [ "$exitcode" == "2" ]; then
+		echo "#########-ERROR-#########"
+		exit
+	elif [ "$exitcode" == "0" ]; then continue
+	else
+		echo "#########-Compiling-#########"
+		make -s "$1"
+		if [ $? -eq 0 ]; then
+			echo "'$1' successfully compiled."
+		else
+			make -s -t "$1"
+		fi
+	fi
+
+done
