@@ -3,7 +3,7 @@ Auto Compile
 Auto compiler for lazy people, like me.
 
 ## Requirements
-A _Makefile_
+_C code obviously_
 
 ## Installation
 You should know how to run a bash script... 😑
