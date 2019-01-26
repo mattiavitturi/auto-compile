@@ -1,12 +1,13 @@
-# auto-compile
+Auto Compile
+============
+Auto compiler for lazy people, like me.
 
-Script bash per auto-compilare programmi in C.
+## Requirements
+A _Makefile_
 
-uso: auto-compile nome-sorgente-senza-estensione [-r]
+## Installation
+You should know how to run a bash script... 😑
 
--r sta per "rebuild", ossia ricompila il codice forzatamente all'avvio dello script.
-
-ATTENZIONE:
-eseguire lo script in un'altra istanza di linux separata da quella attualmente in uso.
-
-per scaricare lo script usare "git clone https://github.com/mattiavitturi/auto-compile"
+## Usage
+```auto-compile src-file-no-ext [-r]```
+- __-r__: rebuilds code at start (by default, it doesn't compile with no file changes)
